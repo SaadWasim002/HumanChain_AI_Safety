@@ -22,8 +22,8 @@ This project is a backend API service to log and manage hypothetical AI safety i
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/SaadWasim002/HumanChain_AI_Safety.git
+   cd HumanChain_AI_Safety
    ```
 
 2. Install dependencies:
@@ -34,8 +34,8 @@ This project is a backend API service to log and manage hypothetical AI safety i
 3. Set up environment variables:
    Create a `.env` file in the root directory with the following variables:
    ```env
+   PORT=5000
    MONGO_URI=<your-mongodb-connection-string>
-   PORT=<port-number> # Default: 3000
    ```
 
 4. Seed the database (optional):
@@ -52,7 +52,7 @@ This project is a backend API service to log and manage hypothetical AI safety i
    npm start
    ```
 
-2. The API will be available at `http://localhost:<PORT>`.
+2. The API will be available at `http://localhost:5000`.
 
 ## API Endpoints
 
@@ -108,7 +108,7 @@ This project is a backend API service to log and manage hypothetical AI safety i
 ### 4. Delete an Incident
 - **Endpoint:** `DELETE /incidents/{id}`
 - **Response:**
-  - `204 No Content` if successful.
+  - `200` if successful with a message "Incident deleted successfully"
   - `404 Not Found` if the incident does not exist.
 
 ## Database Schema
@@ -164,4 +164,3 @@ You can test the API using tools like [Postman](https://www.postman.com/) or `cu
 ## License
 
 This project is for educational purposes and is not licensed for production use.
-    
