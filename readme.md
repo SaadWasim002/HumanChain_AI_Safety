@@ -141,24 +141,24 @@ You can test the API using tools like [Postman](https://www.postman.com/) or `cu
 
 1. **Retrieve all incidents:**
    ```bash
-   curl -X GET http://localhost:<PORT>/incidents
+   curl -X GET http://localhost:5000/incidents
    ```
 
 2. **Log a new incident:**
    ```bash
-   curl -X POST http://localhost:<PORT>/incidents \
+   curl -X POST http://localhost:5000/incidents \
    -H "Content-Type: application/json" \
    -d '{"title": "New Incident", "description": "Details here", "severity": "High"}'
    ```
 
 3. **Retrieve a specific incident:**
    ```bash
-   curl -X GET http://localhost:<PORT>/incidents/<id>
+   curl -X GET http://localhost:5000/incidents/<id>
    ```
 
 4. **Delete an incident:**
    ```bash
-   curl -X DELETE http://localhost:<PORT>/incidents/<id>
+   curl -X DELETE http://localhost:5000/incidents/<id>
    ```
 
 ## License
