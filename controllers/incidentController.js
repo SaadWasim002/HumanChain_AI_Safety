@@ -49,10 +49,13 @@ export const createIncident = async (req, res) => {
     }
 
     try {
-        const incident = new Incident({ title, description, severity });
-        const saved = await incident.save();
+        const createdIncident = await Incident.create({
+            title,
+            description,
+            severity
+        })
         res.status(201).json(
-            new ApiResponse(201 , saved , "Incident created successfully")
+            new ApiResponse(201 , createdIncident , "Incident created successfully")
         );
     } catch (err) {
         throw new ApiError(500 , `Server Error : ${err}`);
